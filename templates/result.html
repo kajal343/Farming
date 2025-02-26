@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="{{url_for('static',filename='style/prediction.css')}}">
+  </head>
+  <body>
+    <div class="container">
+      <h3>According to your soil neutrients</h3>
+      <h3> You Should Grow -> </h3>
+      <br>
+      <br>
+      <h2>{{prediction}}</h2>
+      <a href="{{ml_link}}">Here is the crop info</a>
+    </div>
+  </body>
+</html> 
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+</head>
+<body>
+    <h2>Recommended Crop</h2>
+    <p>The best crop to grow based on your input is: <strong>{{ prediction }}</strong></p>
+    <a href="/">Go Back</a>
+</body>
+</html>
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h2>Predicted Crop</h2>
+    <p>The recommended crop is: <strong>{{ prediction }}</strong></p>
+    <a href="/">Go Back</a>
+</body>
+</html> -->

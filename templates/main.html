@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/home.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <a class="subsidy-btn" href="https://www.myscheme.gov.in/search/category/Agriculture,Rural%20&%20Environment" target="_blank">
+        Check Latest Agriculture Subsidies
+    </a>
+    <a class="subsidy-btn" href="templates/index.html" target="_blank">
+        Crop Recommendation
+    </a>
+    <a class="subsidy-btn" href="{{ url_for('home') }}">
+        <button>Go to Market Price Page</button>
+    </a>
+
+</body>
+</html>
