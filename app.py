@@ -26,7 +26,7 @@ import requests
 
 app = Flask(__name__)
 
-df = pd.read_csv(r"C:\Users\HP\OneDrive\Desktop\agri\Dataset_Crop Recomendation.csv")
+df = pd.read_csv(r"C:\agri\Dataset_Crop Recomendation.csv")
 
 # 🚀 Home Routes
 @app.route('/')
@@ -79,7 +79,7 @@ def get_weather_data(city):
 def brain(Nitrogen, Phosphorus, Potassium, Temperature, Humidity, Ph, Rainfall):
     values = [Nitrogen, Phosphorus, Potassium, Temperature, Humidity, Ph, Rainfall]
     if 0 < Ph <= 14 and Temperature < 100 and Humidity > 0:
-        model_path = "C:\\Users\\HP\\OneDrive\\Desktop\\agri\\models\\model.pkl"
+        model_path = "C:\\agri\\models\\model.pkl"
         model = joblib.load(model_path)
         input_data = np.array(values).reshape(1, -1)
         predicted_crop_label = model.predict(input_data)[0]
